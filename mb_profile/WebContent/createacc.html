@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Farmer Sign-up: </title>
+</head>
+<body style="background-color:brown;">
+
+
+<h1>Please Enter your Organization Information</h1>
+
+<section>
+<p> 
+<form  name="entryForm"  method="post" action="NewOrg.php" enctype="multipart/form-data">
+Name: <input type="text" name="mem_name"><br>
+Organization id: <input type="number" name="mem_id"><br>
+<label for="file">Organization Picture: </label>
+<input type="file" name="file" id="file"><br>
+Gender: <br>
+<input type="radio" name="mem_gender" value="Male" checked>Group of Men<br>
+<input type="radio" name="mem_gender" value="Female">Group of Women<br>
+Email: <input type="email" name="mem_email"><br>
+Agricultural Department: 
+<select name="mem_dep">
+<option value="Fishery">Fishery</option>
+<option value="Seeds">Seeds</option>
+<option value="Cash crops">Cash crops</option>
+<option value="Grains/Friuts">Grains/Friuts</option>
+<option value="Other">Other</option>
+</select>
+<br>
+Brief Description of Organization: <br>
+<textarea name="mem_description" rows="8" cols="80" ></textarea><br>
+<input type="submit" value = "Create">
+</form>
+
+</section>
+
+</body>
+</html>
