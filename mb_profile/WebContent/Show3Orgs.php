@@ -1,22 +1,21 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>3 Most recent Organizations</title>
+<title>Existing Members</title>
 </head>
-<body  style="background-color:brown;">
+<body style="background-color:brown;">
 
-<h1>List of existing Organizations</h1>
+<h1>List of the existing members</h1>
 
 <section>
-<?php 
-$con = mysqli_connect("localhost", "krobbins", "abc123", "mb_data");
-if (mysqli_connect_errno()) {
-   echo "Couldn't connect to database evalurls: " . mysqli_connect_errno();
-}
 
-$result = mysqli_query($con, "select * from members;");
+
+
+<?php
+require_once('FuncModel.php');
+$model = new LabModel("localhost", "krobbins", "abc123", "mb_data");
 $no = 1;
-while ($row = mysqli_fetch_array($result)) {
+while ($row = $model->nextMem()) {
 
 	echo  $no . ":&nbsp &nbsp" ?>
 	<a href="showOrgs.php?id=<?php echo $row["mem_id"]; ?>">
@@ -27,10 +26,9 @@ while ($row = mysqli_fetch_array($result)) {
 	$no++;
 }
 
-mysqli_close($con);
 ?>
 
-<a href = "index.php">Return</a>
+<a href = "index.php">Return to home page</a>
 </section>
 </body>
 </html>

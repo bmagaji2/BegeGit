@@ -2,23 +2,24 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Farmer Sign-up: </title>
+<title>Farmer Sign-up:</title>
 </head>
-<body style="background-color:black;">
-
-
+<body style="background-color:green;">
 <h1>Please Enter your Organization Information</h1>
 
 <section>
 <p> 
+
 <form  name="entryForm"  method="post" action="NewOrg.php" enctype="multipart/form-data">
+User(Organization) Name: <input type="text" name="mem_uname"><br>
+Password: <input type="text" name="mem_pwd"><br><br>
+
 Name: <input type="text" name="mem_name"><br>
-Organization id: <input type="number" name="mem_id"><br>
-<label for="file">Organization Picture: </label>
+<label for="file">Filename:</label>
 <input type="file" name="file" id="file"><br>
 Gender: <br>
-<input type="radio" name="mem_gender" value="Male" checked>Group of Men<br>
-<input type="radio" name="mem_gender" value="Female">Group of Women<br>
+<input type="radio" name="mem_gender" value="Male" checked>Male<br>
+<input type="radio" name="mem_gender" value="Female">Female<br>
 Email: <input type="email" name="mem_email"><br>
 Agricultural Department: 
 <select name="mem_dep">
@@ -29,10 +30,12 @@ Agricultural Department:
 <option value="Other">Other</option>
 </select>
 <br>
-Brief Description of Organization: <br>
+Brief Description: <br>
 <textarea name="mem_description" rows="8" cols="80" ></textarea><br>
 <input type="submit" value = "Create">
 </form>
+
+<br><a href="index.php">Return to Home page</a>
 
 </section>
 
